@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400012}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400008}
+  - 114: {fileID: 11400006}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: AsterismGrabber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .224004328, y: .0640430301, z: .259936064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123c221d32235485bb6124da06198545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: 
+  DontEmitUnchangedValue: 0
+  EmitOnStart: 0
+  UseUpdate: 1
+  UseFixedUpdate: 0
+  Controller: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f337b4262b94914a3af93dd8d2ba3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: 
+  DontEmitUnchangedValue: 0
+  EmitOnStart: 0
+  ReturnPhysicsHand: 1
+  frameEmitter: {fileID: 11400000}
+  lastHandId: -1
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10eaf5a0eadf4e97af8cdb841db9c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: 
+  DontEmitUnchangedValue: 1
+  EmitOnStart: 0
+  Value: 0
+  MaxDistance: 10000
+  centerObject: {fileID: 0}
+  targetObject: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 131072
+  lastHit: {fileID: 0}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a681e7c5bf21d4b92b6a277abc80d109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_leftCam: {fileID: 0}
+  m_gripToggle: {fileID: 11400010}
+  m_hand: {fileID: 11400002}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3b96cf54e8c4ff4aa672c7e699525a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_raycastEmmitter: {fileID: 11400004}
+  switched: {fileID: 11400010}
+  toggle: {fileID: 11400012}
+  view: {fileID: 0}
+  Hand: {fileID: 11400002}
+  minAngle: 80
+  maxAngle: 100
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040214a2ee7674998bfcdeaf44d9dbb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_hand: {fileID: 11400002}
+  toggle: {fileID: 11400012}
+  gripOff: .300000012
+  gripOn: .699999988
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e4505afb93b4e08928f9c103a58ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdPositionOffset: {x: 0, y: 0, z: 0}
+  m_hand: {fileID: 11400002}
+  m_leftCam: {fileID: 0}
+  view: {fileID: 0}
+  Hold: {fileID: 0}
+  layerSelect: 8
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
